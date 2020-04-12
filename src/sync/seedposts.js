@@ -86,15 +86,15 @@ const seedPosts = () => {
 };
 
 //to clear the existing data
-// const clearDB = () => {
-//   Author.remove({})
-//     .then(console.log)
-//     .catch(console.error);
+const clearDB = () => {
+  Author.remove({})
+    .then(console.log)
+    .catch(console.error);
 
-//   Post.remove({})
-//     .then(console.log)
-//     .catch(console.error);
-// };
+  Post.remove({})
+    .then(console.log)
+    .catch(console.error);
+};
 
 seedPosts();
 
