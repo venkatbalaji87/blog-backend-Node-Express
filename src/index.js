@@ -5,10 +5,11 @@ const postsRouter = require("./routers/postsRouter");
 const authorRouter = require("./routers/authorRouter");
 const adminRouter = require("./routers/adminRouter");
 const app = express();
+const cors = require("cors");
 
 app.set("trust proxy", 1); // trust first proxy
 app.use(bodyParser.json());
-
+app.use(cors());
 app.get("/", (req, res) => {
   res.send("Blog Backend running!");
 });
