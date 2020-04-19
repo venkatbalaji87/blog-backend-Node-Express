@@ -1,6 +1,7 @@
 require("./config/db");
 const express = require("express");
 const bodyParser = require("body-parser");
+const cookieParser = require("cookie-parser");
 const postsRouter = require("./routers/postsRouter");
 const authorRouter = require("./routers/authorRouter");
 const adminRouter = require("./routers/adminRouter");
@@ -9,6 +10,7 @@ const cors = require("cors");
 
 app.set("trust proxy", 1); // trust first proxy
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(cors());
 app.get("/", (req, res) => {
   res.send("Blog Backend running!");
